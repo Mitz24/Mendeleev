@@ -130,11 +130,11 @@
     <Compile Include="VizualizareElement.Designer.cs">
       <DependentUpon>VizualizareElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="WebForm.cs">
+    <Compile Include="WebPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WebForm.Designer.cs">
-      <DependentUpon>WebForm.cs</DependentUpon>
+    <Compile Include="WebPage.Designer.cs">
+      <DependentUpon>WebPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CalculatorGradNesaturare.resx">
       <DependentUpon>CalculatorGradNesaturare.cs</DependentUpon>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="VizualizareElement.resx">
       <DependentUpon>VizualizareElement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WebForm.resx">
-      <DependentUpon>WebForm.cs</DependentUpon>
+    <EmbeddedResource Include="WebPage.resx">
+      <DependentUpon>WebPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ElementeDataSet.xsc">
       <DependentUpon>ElementeDataSet.xsd</DependentUpon>
@@ -187,6 +187,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Calculator.png" />
+    <Content Include="Resources\CopyIcon.png" />
+    <None Include="Resources\icons8-copy-24.png" />
+    <None Include="Resources\icons8-calculator-501.png" />
+    <None Include="Resources\icons8-calculator-50.png" />
     <None Include="Resources\icons8-search-24.png" />
     <None Include="bin\Debug\Super Mario Coin Sound Effect.wav" />
     <Content Include="Elemente.mdf">
@@ -196,8 +201,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Elemente.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\CopyIcon.png" />
-    <None Include="Resources\Calculator.png" />
     <None Include="Resources\WikipediaLogo %282%29.jpg" />
     <None Include="Resources\QuestionBlock.png" />
   </ItemGroup>

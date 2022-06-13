@@ -54,14 +54,12 @@ namespace Tabel_Perodic_CS
 
         float ComputeFormula(string input)
         {
-            float total = 0; //Rezultat final
+            float total = 0;
 
-            ///Sistemul de stiva ptr calcule
             List<Tuple<string, int, float>> st = new List<Tuple<string, int, float>>();
             int depth = -1;
-            /////
 
-            string extFormula = String.Empty; ///formula din afara parantezelor.
+            string extFormula = String.Empty;
 
             for (int i = 0; i < input.Length; i++)
             {
@@ -74,7 +72,7 @@ namespace Tabel_Perodic_CS
                 {
                     if (input[i] == ')' || input[i] == ']')
                     {
-                        int j, coef; //parcurgerea coeficientului dezvoltarii
+                        int j, coef;
                         string coefStr = String.Empty;
 
                         for (j = i + 1; j < input.Length; j++)
@@ -85,9 +83,9 @@ namespace Tabel_Perodic_CS
                                 break;
                         }
 
-                        i = j - 1; // -1 ptr ca for-ul incrementeaza i-ul la fiecare pas.
+                        i = j - 1;
 
-                        if (depth >= 0) /// daca nu am ajuns pe ultimul nivel al stivei
+                        if (depth >= 0)
                         {
                             if (!int.TryParse(coefStr, out coef))
                                 coef = 1;
@@ -96,7 +94,7 @@ namespace Tabel_Perodic_CS
 
                         }
 
-                        if (depth >= 1) ///daca mai am dezvoltari necalculate
+                        if (depth >= 1)
                             st[depth - 1] = new Tuple<string, int, float>(st[depth - 1].Item1, st[depth - 1].Item2, st[depth - 1].Item3 + CalculateSubFormula(st[depth].Item1, st[depth].Item2) + st[depth].Item3 * st[depth].Item2);
                         else
                             total += ((CalculateSubFormula(st[depth].Item1) + st[depth].Item3) * st[depth].Item2);
@@ -167,8 +165,6 @@ namespace Tabel_Perodic_CS
                 coefStr = String.Empty;
             }
 
-            total *= dezCoef;
-
             return total;
         }
 
@@ -193,6 +189,18 @@ namespace Tabel_Perodic_CS
         private void picBoxCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(masaMoleculara.ToString());
+        }
+
+        private void picBoxCalculator_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picBoxCalculator, "Calculează");
+        }
+
+        private void picBoxCopy_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picBoxCopy, "Copy");
         }
     }
 }

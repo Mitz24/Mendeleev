@@ -19,8 +19,18 @@ namespace Tabel_Perodic_CS
 
         private void picBoxCalculator_Click(object sender, EventArgs e)
         {
-            int gradNE = 0;
-            gradNE = (int)Math.Round(0.5 * (Convert.ToInt32(txtBoxC.Text) * 2 + 2 - Convert.ToInt32(txtBoxH.Text) + Convert.ToInt32(txtBoxN.Text) - Convert.ToInt32(txtBoxX.Text)));
+            int gradNE = 0, coefC = 0, coefH = 0, coefN = 0, coefX = 0;
+
+            if (txtBoxC.Text != null)
+                coefC = Convert.ToInt32(txtBoxC.Text);
+            if (txtBoxH.Text != null)
+                coefH = Convert.ToInt32(txtBoxH.Text);
+            if (txtBoxN.Text != null)
+                coefN = Convert.ToInt32(txtBoxN.Text);
+            if (txtBoxX.Text != null)
+                coefX = Convert.ToInt32(txtBoxX.Text);
+
+            gradNE = (int)Math.Round(0.5 * (coefC * 2 + 2 - coefH + coefN - coefX));
             lblNE.Text = Convert.ToString(gradNE);
         }
 
@@ -38,6 +48,12 @@ namespace Tabel_Perodic_CS
         {
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.picBoxCopy, "Copy");
+        }
+
+        private void picBoxCalculator_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picBoxCalculator, "Calculează");
         }
     }
 }

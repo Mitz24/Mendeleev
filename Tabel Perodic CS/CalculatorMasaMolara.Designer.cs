@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculatorMasaMolara));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picBoxCalculator = new System.Windows.Forms.PictureBox();
             this.txtFormula = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picBoxCopy = new System.Windows.Forms.PictureBox();
             this.lblMm = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.picBoxCopy = new System.Windows.Forms.PictureBox();
+            this.picBoxCalculator = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCalculator)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCopy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCalculator)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,17 +51,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 71);
             this.panel1.TabIndex = 4;
-            // 
-            // picBoxCalculator
-            // 
-            this.picBoxCalculator.Image = global::Tabel_Perodic_CS.Properties.Resources.Calculator;
-            this.picBoxCalculator.Location = new System.Drawing.Point(367, 13);
-            this.picBoxCalculator.Name = "picBoxCalculator";
-            this.picBoxCalculator.Size = new System.Drawing.Size(43, 42);
-            this.picBoxCalculator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxCalculator.TabIndex = 18;
-            this.picBoxCalculator.TabStop = false;
-            this.picBoxCalculator.Click += new System.EventHandler(this.picBoxCalculator_Click);
             // 
             // txtFormula
             // 
@@ -83,17 +72,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(424, 71);
             this.panel2.TabIndex = 5;
-            // 
-            // picBoxCopy
-            // 
-            this.picBoxCopy.Image = global::Tabel_Perodic_CS.Properties.Resources.CopyIcon;
-            this.picBoxCopy.Location = new System.Drawing.Point(368, 17);
-            this.picBoxCopy.Name = "picBoxCopy";
-            this.picBoxCopy.Size = new System.Drawing.Size(43, 42);
-            this.picBoxCopy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxCopy.TabIndex = 2;
-            this.picBoxCopy.TabStop = false;
-            this.picBoxCopy.Click += new System.EventHandler(this.picBoxCopy_Click);
             // 
             // lblMm
             // 
@@ -117,6 +95,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Masa molara: ";
             // 
+            // picBoxCopy
+            // 
+            this.picBoxCopy.Image = global::Tabel_Perodic_CS.Properties.Resources.icons8_copy_24;
+            this.picBoxCopy.Location = new System.Drawing.Point(368, 17);
+            this.picBoxCopy.Name = "picBoxCopy";
+            this.picBoxCopy.Size = new System.Drawing.Size(43, 42);
+            this.picBoxCopy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxCopy.TabIndex = 2;
+            this.picBoxCopy.TabStop = false;
+            this.picBoxCopy.Click += new System.EventHandler(this.picBoxCopy_Click);
+            this.picBoxCopy.MouseHover += new System.EventHandler(this.picBoxCopy_MouseHover);
+            // 
+            // picBoxCalculator
+            // 
+            this.picBoxCalculator.Image = global::Tabel_Perodic_CS.Properties.Resources.icons8_calculator_50;
+            this.picBoxCalculator.Location = new System.Drawing.Point(367, 13);
+            this.picBoxCalculator.Name = "picBoxCalculator";
+            this.picBoxCalculator.Size = new System.Drawing.Size(43, 42);
+            this.picBoxCalculator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxCalculator.TabIndex = 18;
+            this.picBoxCalculator.TabStop = false;
+            this.picBoxCalculator.Click += new System.EventHandler(this.picBoxCalculator_Click);
+            this.picBoxCalculator.MouseHover += new System.EventHandler(this.picBoxCalculator_MouseHover);
+            // 
             // CalculatorMasaMolara
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,14 +132,14 @@
             this.MinimizeBox = false;
             this.Name = "CalculatorMasaMolara";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CalculatorMasaMolara";
+            this.Text = "Calculator Masa Molara";
             this.Load += new System.EventHandler(this.CalculatorMasaMolara_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCalculator)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCopy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxCalculator)).EndInit();
             this.ResumeLayout(false);
 
         }

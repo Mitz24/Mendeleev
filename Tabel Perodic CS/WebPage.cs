@@ -12,17 +12,17 @@ using CefSharp.WinForms;
 
 namespace Tabel_Perodic_CS
 {
-    public partial class WebForm : Form
+    public partial class WebPage : Form
     {
         List<Element> lst;
         private int nrAtomic;
 
-        public WebForm()
+        public WebPage()
         {
             InitializeComponent();
         }
 
-        public WebForm(int nrAt)
+        public WebPage(int nrAt)
         {
             InitializeComponent();
             nrAtomic = nrAt;

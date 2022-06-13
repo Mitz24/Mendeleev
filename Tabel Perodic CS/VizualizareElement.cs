@@ -33,83 +33,80 @@ namespace Tabel_Perodic_CS
             lblPunctTopire.Text = "N/A";
 
             lst = Element.ReturElementDB();
-            lbNrAtomic.Text = nrAtomic.ToString();
-            lbSimbol.Text = lst[nrAtomic - 1].Simbol.ToString();
-            lbNume.Text = lst[nrAtomic - 1].Denumire.ToString();
-            lbMatomica.Text = lst[nrAtomic - 1].MasaMolara.ToString();
-            label1.Text = lst[nrAtomic - 1].Denumire.ToString();
-            label2.Text = lst[nrAtomic - 1].SerieChimica.ToString();
+            lblNrAtomic.Text = nrAtomic.ToString();
+            lblSimbol.Text = lst[nrAtomic - 1].Simbol.ToString();
+            lbDenumire.Text = lst[nrAtomic - 1].Denumire.ToString();
+            lblMAtomica.Text = lst[nrAtomic - 1].MasaMolara.ToString();
+            lblDenumire1.Text = lst[nrAtomic - 1].Denumire.ToString();
+            lblDenumire2.Text = lst[nrAtomic - 1].SerieChimica.ToString();
             if (lst[nrAtomic - 1].Densitate != -300)
                 lblDensitate.Text = lst[nrAtomic - 1].Densitate.ToString() + " kg/m³";
             if (lst[nrAtomic - 1].PunctFierbere != -300)
                 lblPunctFierbere.Text = lst[nrAtomic - 1].PunctFierbere.ToString() + " °C";
             if(lst[nrAtomic - 1].PunctTopire != -300)
                 lblPunctTopire.Text = lst[nrAtomic - 1].PunctTopire.ToString() + " °C";
-            if (lst[nrAtomic - 1].SerieChimica == "Nemetale")
+
+            switch (lst[nrAtomic - 1].SerieChimica)
             {
-                pnlElement.BackColor = Color.Black;
-                panel1.BackColor = Color.Black;
-            }
-            else
-                if (lst[nrAtomic - 1].SerieChimica == "Metale alcaline")
-                {
+                case "Nemetale":
+                    pnlElement.BackColor = Color.Black;
+                    panel1.BackColor = Color.Black;
+                break;
+
+                case "Metale alcaline":
                     pnlElement.BackColor = Color.SkyBlue;
                     panel1.BackColor = Color.SkyBlue;
-                }
-                else
-                    if (lst[nrAtomic - 1].SerieChimica == "Gaze nobile")
-                    {
-                        pnlElement.BackColor = Color.Crimson;
-                        panel1.BackColor = Color.Crimson;
-                    }
-                    else
-                        if (lst[nrAtomic - 1].SerieChimica == "Metale alcalino-pamantoase")
-                        {
-                            pnlElement.BackColor = Color.RoyalBlue;
-                            panel1.BackColor = Color.RoyalBlue;
-                        }
-                        else 
-                            if (lst[nrAtomic - 1].SerieChimica == "Metale de tranzitie")
-                            {
-                                pnlElement.BackColor = Color.LimeGreen;
-                                panel1.BackColor = Color.LimeGreen;
-                            }
-                            else
-                                if (lst[nrAtomic - 1].SerieChimica == "Metale de post-tranzitie")
-                                {
-                                    pnlElement.BackColor = Color.DarkGreen;
-                                    panel1.BackColor = Color.DarkGreen;
-                                }
-                                else
-                                    if (lst[nrAtomic - 1].SerieChimica == "Metaloizi")
-                                    {
-                                        pnlElement.BackColor = Color.DarkOrange;
-                                        panel1.BackColor = Color.DarkOrange;
-                                    }
-                                    else
-                                        if (lst[nrAtomic - 1].SerieChimica == "Halogeni")
-                                        {
-                                            pnlElement.BackColor = Color.HotPink;
-                                            panel1.BackColor = Color.HotPink;
-                                        }
-                                        else
-                                            if (lst[nrAtomic - 1].SerieChimica == "Lantanide")
-                                            {
-                                                pnlElement.BackColor = Color.Goldenrod;
-                                                panel1.BackColor = Color.Goldenrod;
-                                            }
-                                            else
-                                                if (lst[nrAtomic - 1].SerieChimica == "Actinide")
-                                                {
-                                                    pnlElement.BackColor = Color.Olive;
-                                                    panel1.BackColor = Color.Olive;
-                                                }
+                break;
+
+                case "Gaze nobile":
+                    pnlElement.BackColor = Color.Crimson;
+                    panel1.BackColor = Color.Crimson;
+                break;
+
+                case "Metale alcalino-pamantoase":
+                    pnlElement.BackColor = Color.RoyalBlue;
+                    panel1.BackColor = Color.RoyalBlue;
+                break;
+
+                case "Metale de tranzitie":
+                    pnlElement.BackColor = Color.LimeGreen;
+                    panel1.BackColor = Color.LimeGreen;
+                break;
+
+                case "Metale de post-tranzitie":
+                    pnlElement.BackColor = Color.DarkGreen;
+                    panel1.BackColor = Color.DarkGreen;
+                break;
+
+                case "Metaloizi":
+                    pnlElement.BackColor = Color.DarkOrange;
+                    panel1.BackColor = Color.DarkOrange;
+                break;
+
+                case "Halogeni":
+                    pnlElement.BackColor = Color.HotPink;
+                    panel1.BackColor = Color.HotPink;
+                break;
+
+                case "Lantanide":
+                    pnlElement.BackColor = Color.Goldenrod;
+                    panel1.BackColor = Color.Goldenrod;
+                break;
+
+                case "Actinide":
+                    pnlElement.BackColor = Color.Olive;
+                    panel1.BackColor = Color.Olive;
+                break;
+
+                default:
+                break;
+            }
         }
 
         private void WikiClick(object sender, EventArgs e)
         {
-            WebForm frm2 = new WebForm(nrAtomic);
-            frm2.ShowDialog();
+            WebPage frm = new WebPage(nrAtomic);
+            frm.ShowDialog();
         }
     }
 }

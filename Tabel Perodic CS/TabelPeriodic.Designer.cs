@@ -2086,14 +2086,14 @@
             this.lbNume.Name = "lbNume";
             this.lbNume.Size = new System.Drawing.Size(94, 17);
             this.lbNume.TabIndex = 2;
-            this.lbNume.Text = "Hydrogen";
+            this.lbNume.Text = "Hidrogen";
             this.lbNume.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbSimbol
             // 
             this.lbSimbol.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSimbol.ForeColor = System.Drawing.Color.White;
-            this.lbSimbol.Location = new System.Drawing.Point(23, 41);
+            this.lbSimbol.Location = new System.Drawing.Point(25, 42);
             this.lbSimbol.Name = "lbSimbol";
             this.lbSimbol.Size = new System.Drawing.Size(69, 37);
             this.lbSimbol.TabIndex = 1;
@@ -2268,6 +2268,7 @@
             // 
             // button50
             // 
+            this.button50.BackColor = System.Drawing.Color.Gold;
             this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button50.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button50.ForeColor = System.Drawing.Color.Black;
@@ -2276,11 +2277,12 @@
             this.button50.Size = new System.Drawing.Size(130, 41);
             this.button50.TabIndex = 1;
             this.button50.Text = "Masa molara";
-            this.button50.UseVisualStyleBackColor = true;
+            this.button50.UseVisualStyleBackColor = false;
             this.button50.Click += new System.EventHandler(this.btnMM_Click);
             // 
             // btnNE
             // 
+            this.btnNE.BackColor = System.Drawing.Color.Gold;
             this.btnNE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNE.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNE.ForeColor = System.Drawing.Color.Black;
@@ -2289,7 +2291,7 @@
             this.btnNE.Size = new System.Drawing.Size(130, 41);
             this.btnNE.TabIndex = 1;
             this.btnNE.Text = "Grad Nesaturare";
-            this.btnNE.UseVisualStyleBackColor = true;
+            this.btnNE.UseVisualStyleBackColor = false;
             this.btnNE.Click += new System.EventHandler(this.btnNE_Click);
             // 
             // txtSearch
@@ -2342,7 +2344,7 @@
             this.MinimizeBox = false;
             this.Name = "TabelPeriodic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chemistry App";
+            this.Text = "Mendeleev";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlElement.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

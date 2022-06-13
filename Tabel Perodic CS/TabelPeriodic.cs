@@ -68,8 +68,8 @@ namespace Tabel_Perodic_CS
 
         private void btnNE_Click(object sender, EventArgs e)
         {
-            CalculatorGradNesaturare frm3 = new CalculatorGradNesaturare();
-            frm3.ShowDialog();
+            CalculatorGradNesaturare frm = new CalculatorGradNesaturare();
+            frm.ShowDialog();
         }
 
         private void BtnQClick(object sender, EventArgs e)
@@ -81,8 +81,8 @@ namespace Tabel_Perodic_CS
 
         private void btnMM_Click(object sender, EventArgs e)
         {
-            CalculatorMasaMolara frm4 = new CalculatorMasaMolara();
-            frm4.ShowDialog();
+            CalculatorMasaMolara frm = new CalculatorMasaMolara();
+            frm.ShowDialog();
         }
 
         private void LoadSuggestions()
