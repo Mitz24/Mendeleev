@@ -21,7 +21,6 @@ namespace Tabel_Perodic_CS
                         return elements[i].MasaMolara;
                 }
                 return -1;
-                //return elements.Find(x => x.Simbol == symbol).MasaMolara;
             }  
             else
                 return -1;
