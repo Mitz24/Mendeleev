@@ -21,16 +21,16 @@ namespace Tabel_Perodic_CS
         {
             int gradNE = 0, coefC = 0, coefH = 0, coefN = 0, coefX = 0;
 
-            if (txtBoxC.Text != null)
+            if (txtBoxC.Text != "")
                 coefC = Convert.ToInt32(txtBoxC.Text);
-            if (txtBoxH.Text != null)
+            if (txtBoxH.Text != "")
                 coefH = Convert.ToInt32(txtBoxH.Text);
-            if (txtBoxN.Text != null)
+            if (txtBoxN.Text != "")
                 coefN = Convert.ToInt32(txtBoxN.Text);
-            if (txtBoxX.Text != null)
+            if (txtBoxX.Text != "")
                 coefX = Convert.ToInt32(txtBoxX.Text);
 
-            gradNE = (int)Math.Round(0.5 * (coefC * 2 + 2 - coefH + coefN - coefX));
+            gradNE = (int)Math.Round(0.5 * (coefC *  2 + 2 - coefH + coefN - coefX));
             lblNE.Text = Convert.ToString(gradNE);
         }
 

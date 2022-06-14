@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
-//using System.Media;
+using System.Media;
 
 namespace Tabel_Perodic_CS
 {
@@ -18,13 +18,12 @@ namespace Tabel_Perodic_CS
 
         List<Element> lst;
         Random rnd = new Random();
-        //SoundPlayer player = new SoundPlayer(@"C:\Users\Mihai\Desktop\info\TabelPerodicCS\Tabel Perodic CS\Sound Effects\Super Mario Coin Sound Effect.wav");
-        //private SoundPlayer player;
+        private SoundPlayer player;
 
         public TabelPeriodic()
         {
             InitializeComponent();
-            //player = new SoundPlayer(Properties.Resources.Super_Mario_Coin_Sound_Effect);
+            player = new SoundPlayer(Properties.Resources.Super_Mario_Coin_Sound_Effect);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,7 +73,7 @@ namespace Tabel_Perodic_CS
 
         private void BtnQClick(object sender, EventArgs e)
         {
-            //player.Play();
+            player.Play();
             VizualizareElement frm = new VizualizareElement(rnd.Next(118) + 1);
             frm.ShowDialog();
         }
