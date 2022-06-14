@@ -30,7 +30,7 @@ namespace Tabel_Perodic_CS
             if (txtBoxX.Text != "")
                 coefX = Convert.ToInt32(txtBoxX.Text);
 
-            gradNE = (int)Math.Round(0.5 * (coefC * 2 + 2 - coefH + coefN - coefX));
+            gradNE = (int)Math.Round(0.5 * (coefC *  2 + 2 - coefH + coefN - coefX));
             lblNE.Text = Convert.ToString(gradNE);
         }
 
